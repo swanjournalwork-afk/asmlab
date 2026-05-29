@@ -1,0 +1,6 @@
+{
+  "name": "AU Remote Sensing Lab",
+  "description": "Academic research lab at Aarhus University specializing in remote sensing, modeling, and sustainable agriculture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

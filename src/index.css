@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-primary: #065f46; /* Emerald 800 */
+  --color-primary-light: #10b981; /* Emerald 500 */
+  --color-primary-dark: #064e3b; /* Emerald 900 */
+  
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-900: #0f172a;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 antialiased font-sans;
+  }
+}
+
+.nav-link {
+  @apply text-sm font-medium text-slate-400 hover:text-white transition-colors duration-200 relative py-1;
+}
+
+.nav-link-active {
+  @apply text-white border-b border-primary-light;
+}
+
+.section-label {
+  @apply text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block font-mono;
+}
+
+.minimal-card {
+  @apply border-t border-slate-100 pt-6 transition-all duration-300;
+}
+
+.markdown-body h1 { @apply text-4xl font-light tracking-tight mb-6 text-slate-900; }
+.markdown-body h2 { @apply text-2xl font-semibold mt-10 mb-4 text-slate-800; }
+.markdown-body p { @apply text-lg leading-relaxed text-slate-600 mb-6; }
