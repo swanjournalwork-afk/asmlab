@@ -204,26 +204,9 @@ export default function Team() {
       </section>
 
       {/* Grid of Team Members */}
-      <section className="px-6 md:px-12 max-w-7xl mx-auto space-y-8 md:space-y-12">
-        <div className="flex items-center gap-4">
-          <h3 className="text-xl font-bold text-slate-900 tracking-tight">Active Lab Members</h3>
-          <div className="flex-grow h-px bg-slate-100"></div>
-        </div>
+      <section className="px-6 md:px-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12 md:gap-x-12 md:gap-y-20">
-          {team.members.map((member, index) => (
-            <MemberCard key={member.name} member={member} index={index} />
-          ))}
-        </div>
-      </section>
-
-      {/* Grid of Visiting Members */}
-      <section className="px-6 md:px-12 max-w-7xl mx-auto space-y-8 md:space-y-12 pt-16 border-t border-slate-100">
-        <div className="flex items-center gap-4">
-          <h3 className="text-xl font-bold text-slate-900 tracking-tight">Visiting Researchers</h3>
-          <div className="flex-grow h-px bg-slate-100"></div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12 md:gap-x-12 md:gap-y-20">
-          {team.visiting.map((member, index) => (
+          {[...team.members, ...team.visiting].map((member, index) => (
             <MemberCard key={member.name} member={member} index={index} />
           ))}
         </div>
