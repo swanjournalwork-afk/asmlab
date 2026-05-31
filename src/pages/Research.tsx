@@ -5,7 +5,7 @@ import {
 } from 'lucide-react';
 
 export default function Research() {
-  const [isProductExpanded, setIsProductExpanded] = useState<boolean>(false);
+  const [isProductExpanded, setIsProductExpanded] = useState<boolean>(true);
 
   interface Project {
     title: string;
@@ -83,9 +83,6 @@ export default function Research() {
                         </span>
                       ))}
                     </div>
-                    <span className="px-2.5 py-1 text-[8px] font-mono font-bold uppercase tracking-widest bg-slate-900 text-white rounded">
-                      {project.status}
-                    </span>
                   </div>
 
                   <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight leading-snug">
@@ -96,18 +93,14 @@ export default function Research() {
                     {project.description}
                   </p>
                   
-                  <div className={`grid grid-cols-1 ${project.partners ? 'sm:grid-cols-2' : ''} gap-6 py-5 border-y border-slate-50`}>
-                    <div className="space-y-1">
-                      <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest font-mono block">Duration</span>
-                      <div className="text-sm font-bold text-slate-700 font-mono">{project.duration}</div>
-                    </div>
-                    {project.partners && (
+                  {project.partners && (
+                    <div className="grid grid-cols-1 gap-6 py-5 border-y border-slate-50">
                       <div className="space-y-1">
                         <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest font-mono block">Partners</span>
                         <div className="text-sm font-bold text-slate-700 font-mono">{project.partners}</div>
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
 
                   {project.product && (
                     <div className="mt-8 flex flex-col">
