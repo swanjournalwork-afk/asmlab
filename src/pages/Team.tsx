@@ -44,7 +44,12 @@ const MemberCard = ({ member, index }: MemberCardProps) => (
             </a>
           )}
           {member.links?.researchgate && (
-            <a href={member.links.researchgate} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-primary transition-colors">
+            <a href={member.links.researchgate} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-primary transition-colors" title="ResearchGate">
+              <GraduationCap size={12} />
+            </a>
+          )}
+          {member.links?.scholar && (
+            <a href={member.links.scholar} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-primary transition-colors" title="Google Scholar">
               <GraduationCap size={12} />
             </a>
           )}
@@ -133,6 +138,16 @@ export default function Team() {
         links: {
           researchgate: "https://www.researchgate.net/profile/Michal-Antala"
         }
+      },
+      {
+        name: "Dr. Daijun Liu",
+        role: "Academic Employee",
+        image: "https://i.postimg.cc/Gt31Rj1L/Sl064d-V7.jpg",
+        bio: "Specializes in assessing the impact of global climate and land-use change, species invasion, biodiversity, and functional traits on forest dynamics and tree mortality.",
+        interests: ["Climate changes", "Land-use change", "Species invasion", "Biodiversity", "Functional traits", "Tree mortality"],
+        links: {
+          scholar: "https://scholar.google.com/citations?user=MqX3SlYAAAAJ&hl=en"
+        }
       }
     ],
     visiting: [
@@ -157,7 +172,7 @@ export default function Team() {
       <section className="px-6 md:px-12">
         <div className="max-w-7xl mx-auto space-y-6 text-center lg:text-left">
           <p className="text-lg md:text-xl text-slate-600 max-w-3xl lg:mx-0 mx-auto leading-relaxed">
-            Our team brings together expertise in remote sensing, machine learning, earth system science, and ecosystem modeling to address complex challenges in Earth and smart agricultural systems.
+            Our team brings together expertise in remote sensing, computational approaches, and Earth system science to address complex challenges in agricultural and Earth system sustainability.
           </p>
         </div>
       </section>
@@ -217,15 +232,20 @@ export default function Team() {
           <div className="flex flex-col md:flex-row justify-between gap-12">
             <div className="space-y-3">
               <h3 className="text-xl font-bold text-slate-800">Lab Alumni</h3>
-              <p className="text-sm text-slate-500 leading-relaxed max-w-xs">Our former members contribute to global science in industry and academia.</p>
             </div>
-           <div className="flex flex-wrap gap-x-10 gap-y-6 max-w-2xl">
-              {[].map(name => (
-                <span key={name} className="text-slate-400 text-[10px] font-bold uppercase tracking-widest font-mono">
-                  {name}
-                </span>
-              ))}
-           </div>
+            <div className="flex flex-col gap-6 max-w-2xl w-full">
+              <div className="border-l-2 border-slate-200 pl-4 space-y-1">
+                 <div className="flex items-center gap-2">
+                   <h4 className="font-bold text-slate-800">Abdallah Abdelmajeed</h4>
+                   <a href="mailto:abdallah.abdelmajeed@up.poznan.pl" className="text-slate-400 hover:text-primary transition-colors">
+                     <Mail size={12} />
+                   </a>
+                 </div>
+                 <p className="text-xs text-slate-500 font-light leading-relaxed">
+                   PhD student at Poznan University of Technology — Exchange student (1 Oct 2025 – 31 Mar 2026) at Aarhus University
+                 </p>
+              </div>
+            </div>
          </div>
       </section>
     </div>

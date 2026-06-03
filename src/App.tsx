@@ -26,7 +26,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 md:h-24 flex items-center justify-between">
         <Link to="/" className="flex flex-col">
           <span className="text-lg md:text-xl font-bold tracking-tight text-white leading-none">
-            Agri-Sensing & Modelling Lab
+            GeoIntelligence Lab
           </span>
         </Link>
 
