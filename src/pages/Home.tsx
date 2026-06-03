@@ -50,7 +50,7 @@ export default function Home() {
             className="col-span-12 lg:col-span-10 space-y-8"
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-slate-900 tracking-tight leading-[1.1]">
-              Advancing remote sensing and environmental modelling for <span className="text-primary">food security and environmental sustainability.</span>
+              Advancing remote sensing and environmental modelling for <span className="text-primary">food security and environmental sustainability</span>
             </h1>
             
             <p className="text-xl text-slate-600 leading-relaxed max-w-3xl">
