@@ -54,7 +54,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl text-slate-600 leading-relaxed max-w-3xl">
-              Our team develops data-driven approaches to investigate crop, soil, and ecosystem dynamics using remote sensing, machine learning, and predictive environmental models.
+              Our team develops computational approaches to investigate crop, soil, and ecosystem dynamics using remote sensing, machine learning, and process-based models.
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
